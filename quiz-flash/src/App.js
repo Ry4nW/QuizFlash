@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+import logo from './thing.png';
+import ReactDOM from 'react-dom'
 import './App.css';
+import React from 'react';
 
-function App() {
+function App(props) {
+  const s1 = "HELLO";
+  const s2 = "BYE";
+
+  function handleFCClick() {
+    const flashcard = document.querySelector(".flashcard-text-1");
+    const cur = flashcard.textContent;
+    console.log(cur);
+    if (cur === s1) flashcard.textContent = s2;
+    else flashcard.textContent = s1;
+  }
   return (
     <div className="App">
       <header className="App-header">
+        <h1>QuizFlash</h1>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Hello, World
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
       </header>
+
+      <content>
+        <button className="flashcard-text-1" onClick={() => handleFCClick()}>{s1}</button>
+      </content>
     </div>
   );
 }
