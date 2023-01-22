@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: white;
+  background-color: #9999FF;
 }
 
 .App-logo {
@@ -9,14 +9,12 @@
 }
 
 .App-header {
-  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
@@ -35,3 +33,43 @@
 }
 
 /* Navbar */
+
+/* Other Changes */
+
+.title_container {
+  width: 100%;
+  height: 100px;
+  background: rgb(255,9,49);
+  background: linear-gradient(90deg, rgba(255,9,49,1) 0%, rgba(246,149,237,1) 59%, rgba(117,0,255,1) 100%);
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+}
+
+.container {
+  width: 50%;
+  height: 100px; 
+}
+
+.title_text {
+  font-family: monospace;
+  font: 'Monaco';
+  color: white;
+  font-size: 70px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mascot_img {
+  position:absolute;
+  width: 200px;
+  height:200px;
+  right:0
+}
+
+.mascot_div {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  color: green;
+}
