@@ -4,6 +4,8 @@ import owl from './owl.png'
 import frog from './frog.png'
 import './App.css';
 import "./index.css"
+import Room from './Room';
+import Lobby from './Lobby';
 import React from 'react';
 
 function App(props) {
