@@ -4,10 +4,25 @@
     margin: 0;
     background-color: #E6F2FF;
     background-position: 0 1em;
+    height: 3em;
     overflow: hidden;
 }
 
 .navbar-main > li {
     display: inline;
     padding: 3em;
+}
+
+.nav_text {
+    color: red;
+    font-size: 2em;
+    text-decoration: none;
+    margin: 0 auto;
+    display: flex;
+    vertical-align: baseline;
+}
+
+.a :visited{
+    text-decoration: none;
+    color: blue;
 }
