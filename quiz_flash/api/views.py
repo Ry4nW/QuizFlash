@@ -7,3 +7,7 @@ from .models import Room
 class RoomView(generics.CreateAPIView):
     query = Room.objects.all()
     serializer_class = RoomSerializer
+
+def front(request):
+    context = { }
+    return render(request, "index.html", context)
