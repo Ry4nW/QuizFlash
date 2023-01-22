@@ -10,10 +10,23 @@ def generate_room_code():
         code = ''.join(random.choices(string.ascii_uppercase, k=length))
         if Room.objects.filter(code=code).count() == 0:
             break
+    
+    return code
 
 # Create your models here.
 class Room(models.Model):
-    code = models.CharField(max_length=6, default="", unique=True)
+    code = models.CharField(
+        max_length=6, default=generate_room_code, unique=True)
     host = models.CharField(max_length=50, unique=True)
     created_at = models.DateTimeField(auto_now_add=True)
-    round_time_limit = models.DurationField(null=False, default=datetime.timedelta(seconds=30))
+    round_time_limit = models.IntegerField(null=False, default=30)
+    max_players = models.IntegerField(null=False, default=30)
+
+
+class Quiz(models.Model):
+    title = models.CharField(max_length=50)
+    # multiple flash cards
+
+class FlashCard(models.Model):
+    question = models.CharField(max_length=100)
+    answer = models.CharField(max_length=100)
