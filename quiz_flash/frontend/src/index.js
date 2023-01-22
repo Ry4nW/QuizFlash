@@ -5,13 +5,17 @@ import reportWebVitals from './reportWebVitals';
 
 import Header from './Header';
 import App from './App';
+import Room from './Room';
+import Lobby from './Lobby';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <>
-        <Header />
-        <App />
+        <Header/>
+        <App/>
+        <Room/>
+        <Lobby/>
     </>
 
 
