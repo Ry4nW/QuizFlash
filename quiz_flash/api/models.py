@@ -22,9 +22,12 @@ class Room(models.Model):
     round_time_limit = models.IntegerField(blank=True, null=True)
     max_players = models.IntegerField(blank=True, null=True)
 
+# class Player(models.Model):
+#     room = models.ForeignKey(Room)
+#     score = models.IntegerField(default=0)
+
 class Quiz(models.Model):
     title = models.CharField(max_length=50)
-    # multiple flash cards
 
 class FlashCard(models.Model):
     question = models.CharField(max_length=100)
