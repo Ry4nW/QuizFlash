@@ -1,5 +1,6 @@
 import logo from './thing.png';
 import mascot from './flashtheduck.png';
+import owl from './owl.png'
 import ReactDOM from 'react-dom'
 import './App.css';
 import React from 'react';
@@ -15,7 +16,8 @@ function App(props) {
           <h1>A new and fun way to learn!</h1>
           <div class="mascot_div">
             <img src={mascot} class="mascot_img" className="mascot" alt="mascot" />
-        </div>
+            <img src={owl} class="mascot_img" className="owl" alt="owl" />
+          </div>
         </div>
 
       </header>
