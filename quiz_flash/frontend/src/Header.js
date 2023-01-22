@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 import "./Header.css"
 
 function Header(props) {
@@ -9,9 +10,9 @@ function Header(props) {
           <h1 class="title_text">QuizFlash</h1>
         </div>
         <ul className="navbar-main">
-            <li className="nav-ele" class="nav_text"><a href="#">Home</a></li>
-            <li className="nav-ele" class="nav_text"><a href="#">Your library</a></li>
-            <li className="nav-ele" class="nav_text"><a href="#">Create</a></li>
+            <li className="nav-ele" class="nav_text"><Link to="App.js">Home</Link></li>
+            <li className="nav-ele" class="nav_text"><a href="/">Your library</a></li>
+            <li className="nav-ele" class="nav_text"><Link to="Lobby.js">Create</Link></li>
         </ul>
     </nav>
   );

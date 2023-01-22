@@ -61,10 +61,11 @@
 }
 
 .mascot_img {
-  position:absolute;
+  display: block;
   width: 200px;
   height:200px;
-  right:0
+  right: 0;
+  display: block;
 }
 
 .mascot_div {
@@ -72,4 +73,21 @@
   height: 100%;
   width: 100%;
   color: green;
+}
+
+.rotate_image {
+  animation: rotation 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotation {
+0% {
+  transform: rotate(-23deg);
+}
+50% {
+  transform: rotate(23deg);
+}
+100% {
+  transform: rotate(-23deg);
+}
 }

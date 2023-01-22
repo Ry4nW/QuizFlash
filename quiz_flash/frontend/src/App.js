@@ -16,9 +16,9 @@ function App(props) {
         <div class="container">
           <h1>A new and fun way to learn!</h1>
           <div class="mascot_div">
-            <img src={mascot} class="mascot_img" className="mascot" alt="mascot" />
-            <img src={owl} class="mascot_img" className="owl" alt="owl" />
-            <img src={frog} class="mascot_img" className="frog" alt="frog" />
+            <img src={mascot} class="mascot_img rotate_image" className="mascot" alt="mascot" />
+            <img src={owl} class="mascot_img rotate_image" className="owl" alt="owl" />
+            <img src={frog} class="mascot_img rotate_image" className="frog" alt="frog" />
           </div>
         </div>
 
