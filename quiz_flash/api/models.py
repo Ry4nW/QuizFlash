@@ -19,9 +19,8 @@ class Room(models.Model):
         max_length=6, default=generate_room_code, unique=True)
     host = models.CharField(max_length=50, unique=True)
     created_at = models.DateTimeField(auto_now_add=True)
-    round_time_limit = models.IntegerField(null=False, default=30)
-    max_players = models.IntegerField(null=False, default=30)
-
+    round_time_limit = models.IntegerField(blank=True, null=True)
+    max_players = models.IntegerField(blank=True, null=True)
 
 class Quiz(models.Model):
     title = models.CharField(max_length=50)
