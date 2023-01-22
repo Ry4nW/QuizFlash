@@ -22,13 +22,23 @@ class Room(models.Model):
     round_time_limit = models.IntegerField(blank=True, null=True)
     max_players = models.IntegerField(blank=True, null=True)
 
-# class Player(models.Model):
-#     room = models.ForeignKey(Room)
-#     score = models.IntegerField(default=0)
+    def players(self):
+        return self.users.all()
+
+class Player(models.Model):
+    user_score = models.IntegerField(default=0)
+    submit_time = models.DateTimeField(null=True, blank=True)
+    name = models.CharField(max_length=10)
+    room = models.ForeignKey('Room', on_delete=models.SET_NULL, null=True, default=None, related_name='users')
 
 class Quiz(models.Model):
     title = models.CharField(max_length=50)
+    description = models.CharField(max_length=100, default='')
+
+    def cards(self):
+        return self.cards.all()
 
 class FlashCard(models.Model):
     question = models.CharField(max_length=100)
     answer = models.CharField(max_length=100)
+    quiz = models.ForeignKey('quiz', on_delete=models.SET_NULL, null=True, default=None, related_name='cards')
