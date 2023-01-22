@@ -5,6 +5,13 @@
     float: left;
 }
 
+.player_img_block {
+  display: inline-block;
+  height: 80%;
+  top: 20%;
+  float: left;
+}
+
 .grid {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -20,7 +27,7 @@
 .qanda {
     width: 100%;
     float: right;
-    display: inline;
+    display: flex;
 }
 
 .text {
@@ -30,12 +37,33 @@
     background-color: grey;
     border: solid;
     border-radius: 20px;
+}
 
+.player_text {
+  padding: 0 40% 0 35%;
+  float: left;
+  background-color: grey;
+  margin: 0 auto;
+  align-items: center;
+  display: block;
+  background-clip: content-box;
 }
 
 .container {
     height: 20em;
-    width: 100%;
+    width: 300%; 
+}
+
+.player_grid{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  margin: 0;
+}
+
+.player {
+  height: 20em;
+  width: 20em;
+  background-color: orange;
 }
 
 .text_container{
@@ -59,4 +87,29 @@
   100% {
     transform: rotate(-23deg);
   }
+}
+
+.start_button {
+  height: 2em;
+  background-color: green;
+  width: 6em;
+  margin: 0 auto;
+  font-size: 2em;
+  display: flex;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.leave_button {
+  height: 2em;
+  background-color: red;
+  width: 6em;
+  font-size: 2em;
+  text-align: center;
+  vertical-align: right;
+  float: right;
+}
+
+a {
+  text-decoration: none;
 }
